@@ -57,7 +57,7 @@ app.put('/products/:id',(req, resp) => {
 app.delete('/products/:id', (req, resp) => {
     database.collection('products').deleteOne({id: parseInt(req.params.id)}, (err, result) =>{
         if(err) throw err
-        resp.send('Book is deleted')
+        resp.send('Product is deleted')
     })
 })
 
